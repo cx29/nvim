@@ -5,7 +5,7 @@ local keymap = vim.keymap
 
 -- neovim设置快捷键方式(官网)
 local map = vim.api.nvim_set_keymap
-local opt = {noremap = true,silent=true}
+local opt = { noremap = true, silent = true }
 
 ---------------------
 -- General Keymaps
@@ -18,8 +18,8 @@ keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Increment/decrement
-vim.keymap.set('n', '+', '<C-a>')
-vim.keymap.set('n', '-', '<C-x>')
+vim.keymap.set("n", "+", "<C-a>")
+vim.keymap.set("n", "-", "<C-x>")
 
 -- use jj to exit insert mode, jk recommended
 keymap.set("i", "jj", "<ESC>")
@@ -32,20 +32,20 @@ keymap.set("n", "<leader>nh", ":nohl<CR>")
 -- keymap.set("n", "<C-h>", ":bprevious<CR>")
 
 -- Delete a word backwards
-vim.keymap.set('n', 'dw', 'vb"_d')
+vim.keymap.set("n", "dw", 'vb"_d')
 
 -- 向上新起一行,向下新起一行
-map('i','<S-Home>',"<Esc>O",opt)
-map('i','<S-End>',"<Esc>o",opt)
+map("i", "<S-Home>", "<Esc>O", opt)
+map("i", "<S-End>", "<Esc>o", opt)
 
 -- Insert mode with move
-map('i',"<C-k>","<Up>",opt)
-map('i',"<C-j>","<Down>",opt)
-map('i',"<C-l>","<Right>",opt)
-map('i',"<C-h>","<Left>",opt)
+map("i", "<C-k>", "<Up>", opt)
+map("i", "<C-j>", "<Down>", opt)
+map("i", "<C-l>", "<Right>", opt)
+map("i", "<C-h>", "<Left>", opt)
 
 -- Select all
-keymap.set('n', '<C-a>', 'gg<S-v>G')
+keymap.set("n", "<C-a>", "gg<S-v>G")
 
 -- window management
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
@@ -59,10 +59,10 @@ keymap.set("n", "<leader>tn", ":tabn<CR>") --  go to next tab
 keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 
 -- 退出
-keymap.set('n', '<A-q>', ':q<CR>')
-map('n', 'w', ':w<CR>', opt)
-keymap.set('n', 'wq', ':wq<CR>')
-keymap.set('n', 'qq', ':qa!<CR>')
+keymap.set("n", "<A-q>", ":q<CR>")
+map("n", "w", ":w<CR>", opt)
+keymap.set("n", "wq", ":wq<CR>")
+keymap.set("n", "qq", ":qa!<CR>")
 
 ----------------------
 -- Plugin Keybinds
@@ -74,6 +74,8 @@ keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window max
 -- nvim-tree
 keymap.set("n", "<A-m>", ":NvimTreeToggle<CR>") -- toggle file explorer
 
+-- tree-sitter
+keymap.set("n", "zz", ":foldclose<CR>")
 
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore

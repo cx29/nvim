@@ -120,6 +120,11 @@ _G.packer_plugins = {
     path = "/home/cx/.local/share/nvim/site/pack/packer/start/hop.nvim",
     url = "git@github.com:phaazon/hop.nvim"
   },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "/home/cx/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "git@github.com:lukas-reineke/indent-blankline.nvim"
+  },
   ["lspkind.nvim"] = {
     loaded = true,
     path = "/home/cx/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
