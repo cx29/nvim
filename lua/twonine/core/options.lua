@@ -4,8 +4,8 @@ local opt = vim.opt -- for conciseness
 opt.number = true -- shows absolute line number on cursor line
 
 -- utf8
-vim.g.encoding = 'UTF-8'
-vim.o.fileencoding = 'UTF-8'
+vim.g.encoding = "UTF-8"
+vim.o.fileencoding = "UTF-8"
 -- jkhl 移动时光标周围保留8行
 vim.o.scrolloff = 8
 vim.o.sidescrolloff = 8
@@ -23,7 +23,7 @@ vim.o.writebackup = false
 vim.o.swapfile = false
 
 -- 是否显示不可见字符
-vim.o.list = true
+vim.o.list = false
 
 -- tabs & indentation
 opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
