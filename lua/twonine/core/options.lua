@@ -37,6 +37,7 @@ opt.smartcase = true -- if you include mixed case in your search, assumes you wa
 
 -- cursor line
 opt.cursorline = true -- highlight cursorline
+opt.so = 999
 
 -- 启用鼠标
 opt.mouse:append("a")
