@@ -26,6 +26,9 @@ keymap.set("i", "jj", "<ESC>")
 
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>")
+keymap.set("n", "j", "jzz")
+keymap.set("n", "k", "kzz")
+keymap.set("i", "<CR>", "<ESC>zzi<CR>")
 
 -- 切换buffer
 -- keymap.set("n", "<C-l>", ":bnext<CR>")
