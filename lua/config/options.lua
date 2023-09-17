@@ -3,3 +3,6 @@
 -- Add any additional options here
 
 vim.opt.winbar = "%=%m %f"
+vim.o.backup = false
+vim.o.writebackup = false
+vim.o.swapfile = false
