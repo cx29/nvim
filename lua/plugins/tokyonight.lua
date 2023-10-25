@@ -1,5 +1,5 @@
 return {
-  "folke/tokyonight.nvim",
+  "srcery-colors/srcery-vim",
   opts = {
     -- transparent = true,
     styles = {
