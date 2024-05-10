@@ -14,7 +14,7 @@ end
 function conf.masonlsp()
   require('mason-lspconfig').setup({
     ensure_installed={
-      "lua-ls"
+      -- "lua-ls"
     }
   })
 end
