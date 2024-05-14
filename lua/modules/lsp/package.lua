@@ -91,5 +91,7 @@ packadd({
 		"L3MON4D3/LuaSnip", -- snippets引擎，不装这个自动补全会出问题
 		"saadparwaiz1/cmp_luasnip",
 		"rafamadriz/friendly-snippets",
+    "hrsh7th/cmp-buffer",
+    "hrsh7th/cmp-cmdline"
 	},
 })

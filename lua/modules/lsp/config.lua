@@ -33,20 +33,39 @@ function conf.cmp()
 		window = {
 			documentation = cmp.config.window.bordered({
 				border = "rounded",
-				highlight = "NormalFloat",
+				-- highlight = "NormalFloat",
 			}),
 			completion = cmp.config.window.bordered({
 				border = "single",
-				highlight = "NormalFloat",
-			}),
-			sources = cmp.config.sources({
-				{ name = "nvim_lsp" },
-				{ name = "luasnip" },
-			}, {
-				{ name = "buffer" },
+				-- highlight = "NormalFloat",
 			}),
 		},
+		sources = cmp.config.sources({
+			{ name = "nvim_lsp" },
+			{ name = "luasnip" },
+		}, {
+			{ name = "buffer" },
+		}),
 	})
+	cmp.setup.cmdline("/", {
+		mapping = cmp.mapping.preset.cmdline(),
+		sources = {
+			{ name = "buffer" },
+		},
+	}) -- for search
+	cmp.setup.cmdline(":", {
+		mapping = cmp.mapping.preset.cmdline(),
+		sources = cmp.config.sources({
+			{ name = "path" },
+		}, {
+			{
+				name = "cmdline",
+				options = {
+					ignore_cmds = { "Man", "!" },
+				},
+			},
+		}),
+	}) -- for cmdline
 end
 function conf.lspsaga()
 	require("lspsaga").setup({
