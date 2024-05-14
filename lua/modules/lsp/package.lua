@@ -78,7 +78,18 @@ packadd({
 	config = conf.mason,
 })
 packadd({
-  "williamboman/mason-lspconfig.nvim",
-  event="BufRead",
-  config=conf.masonlsp,
+	"williamboman/mason-lspconfig.nvim",
+	event = "BufRead",
+	config = conf.masonlsp,
+})
+packadd({
+	"hrsh7th/nvim-cmp",
+	event = "BufRead",
+	config = conf.cmp,
+	dependencies = {
+		"hrsh7th/cmp-nvim-lsp",
+		"L3MON4D3/LuaSnip", -- snippets引擎，不装这个自动补全会出问题
+		"saadparwaiz1/cmp_luasnip",
+		"rafamadriz/friendly-snippets",
+	},
 })
